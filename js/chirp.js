@@ -1,5 +1,10 @@
 function chirp(n){
-  // FIX ME
+  let str = 'chirp ';
+  if(n===1){
+    return str;
+  }
+  
+  return str + chirp(n-1);
 }
 
 $(document).ready(function(){
