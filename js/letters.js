@@ -16,11 +16,17 @@ var counter = {
 }
 
 function countLetters(counter, sample_text){
-  let count = 0
-  let str = sample_text.toString();
-}
+  let lowerCase = sample_text.toLowerCase().replace(/[. , ' ']/g, '').split('').toString();
+  let firstChar = lowerCase.charAt(0);
+  let rest = lowerCase.slice(1);
+  if(sample_text.length === 0){
+    return;
+  }
+  counter[firstChar]++;
 
+  return countLetters(counter, rest);
+}
 $(document).ready(function(){
   countLetters(counter, sample_text);
   $("#result").html(JSON.stringify(counter));
-});
+})
