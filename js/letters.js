@@ -16,7 +16,8 @@ var counter = {
 }
 
 function countLetters(counter, sample_text){
-  // FIX ME
+  let count = 0
+  let str = sample_text.toString();
 }
 
 $(document).ready(function(){
